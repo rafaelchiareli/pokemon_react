@@ -1,0 +1,18 @@
+import { capturar } from "../actions";
+export default function PokemonEncontrado({ pokemon }) {
+    return (
+        <div className="encontrado">
+            <img src={pokemon.imagem} alt={pokemon.nome} width={120} height={120} />
+            <div>
+                <h2>#{pokemon.id} {pokemon.nome}</h2>
+                <span className="tipo">{pokemon.tipo}</span>
+                <form action={capturar}>
+                    <input type='hidden' name="pokeId" value={pokemon.id} />
+                    <input type='hidden' name="nome" value={pokemon.nome} />
+                    <input type='hidden' name="imagem" value={pokemon.imagem} />
+                    <input type='hidden' name="tipo" value={pokemon.tipo} />
+                </form>
+            </div>
+        </div>
+    )
+}
