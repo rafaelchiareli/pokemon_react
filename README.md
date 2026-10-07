@@ -2,6 +2,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+crie o arquivo .env na raiz do projeto com a seguinte informação:
+DATABASE_URL="file:./dev.db"
+
+depois rode o comando npx prisma init --datasource-provider sqlite
+depois npx prisma migrate dev --name init
+depois npx prisma generate
+
 First, run the development server:
 
 ```bash

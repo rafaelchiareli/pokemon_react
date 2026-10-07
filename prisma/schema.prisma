@@ -2,8 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client"
-  output   = "../app/generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -12,9 +11,9 @@ datasource db {
 }
 
 model Pokemon {
-  id Int @id @default(autoincrement())
-  pokeId Int
-  nome String
-  imagem String
-  tipo String
+id Int @id @default(autoincrement())
+pokeId Int
+nome String
+imagem String
+tipo String
 }
